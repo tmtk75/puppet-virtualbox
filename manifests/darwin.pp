@@ -5,10 +5,10 @@ class virtualbox::darwin {
     refreshonly => true,
   }
 
-  package { 'VirtualBox-4.3.6-91406-OSX.dmg':
+  package { 'VirtualBox-4.3.10-93012-OSX.dmg':
     ensure   => installed,
     provider => 'pkgdmg',
-    source   => 'http://download.virtualbox.org/virtualbox/4.3.6/VirtualBox-4.3.6-91406-OSX.dmg',
+    source   => 'http://download.virtualbox.org/virtualbox/4.3.10/VirtualBox-4.3.10-93012-OSX.dmg',
     require  => Exec['Kill Virtual Box Processes'],
   }
 }
